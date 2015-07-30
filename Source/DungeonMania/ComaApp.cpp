@@ -17,11 +17,11 @@ ComaApp::~ComaApp()
 void ComaApp::initApp(HINSTANCE hInstance)
 {
 	window = new ComaWindow(hInstance);
-	window->setScreenSize(1280, 720);
-	//window->setFullscreen(true);
-	window->removeStyle(WS_THICKFRAME);
-	window->removeStyle(WS_MAXIMIZEBOX);
-	window->setTitle(TEXT("던전매니아"));
+	window->setScreenSize(1920,1080);
+	window->setFullscreen(true, 1920, 1080);
+	//window->removeStyle(WS_THICKFRAME);
+	//window->removeStyle(WS_MAXIMIZEBOX);
+	window->setTitle(TEXT("던전매니아 (프로토타입)"));
 
 	renderer = new ComaRenderer();
 	renderer->setBackgroundColor(0.0f, 0.0f, 0.1f);

@@ -45,30 +45,41 @@
 */
 
 /*
-* filename	Image.h
-* fileinfo	이미지 표시객체 클래스 헤더 파일
+* filename	TextView.h
+* fileinfo	텍스트 출력 표시객체 클래스 헤더 파일
 * author	주헌양 (Heonyang Ju)
 */
 
 #pragma once
 #include "DisplayObject.h"
-#include "Bitmap.h"
+#include <dwrite.h>
 
 COMA_NS_BEGIN
 
-class Image :
+class TextView :
 	public DisplayObject
 {
 public:
-	Image(Bitmap* bitmap);
-	Image(Bitmap* bitmap, Size size);
-	Image(Bitmap* bitmap, float width, float height);
-	virtual ~Image();
+	TextView(Size layoutSize, std::wstring text = L"", std::wstring fontName = L"굴림", float fontSize = 12, Color color = Color{ 0, 0, 0 });
+	virtual ~TextView();
+
 	virtual void render(ID2D1HwndRenderTarget* renderTarget, double deltaTime);
-	Bitmap* getBitmap(){ return bitmap; }
-protected:
-	bool sizeFixed;
-	Bitmap* bitmap;
+
+	void setColor(Color color);
+	void setColor(float r, float g, float b);
+	void setText(std::wstring text);
+
+private:
+	static IDWriteFactory* factory;
+	static void initFactory();
+	static bool factoryAvailable;
+
+	IDWriteTextFormat* format;
+	ID2D1SolidColorBrush* brush;
+
+	std::wstring text;
+	Color color;
+	float tempScreenAlpha;
 };
 
 COMA_END
