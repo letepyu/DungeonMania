@@ -85,10 +85,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ComaApp.cpp" />
+    <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SplashScene.cpp" />
+    <ClCompile Include="titleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ComaApp.h" />
+    <ClInclude Include="GameScene.h" />
+    <ClInclude Include="SplashScene.h" />
+    <ClInclude Include="titleScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
