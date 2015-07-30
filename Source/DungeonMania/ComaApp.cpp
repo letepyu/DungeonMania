@@ -1,5 +1,6 @@
 #include "ComaApp.h"
 #include "SplashScene.h"
+#include "Resources.h"
 
 ComaApp::ComaApp()
 {
@@ -12,6 +13,7 @@ ComaApp::~ComaApp()
 	delete window;
 	delete renderer;
 	device->Release();
+	Resources::destroyBitmaps();
 }
 
 void ComaApp::initApp(HINSTANCE hInstance)
@@ -24,11 +26,11 @@ void ComaApp::initApp(HINSTANCE hInstance)
 	window->setTitle(TEXT("던전매니아 (프로토타입)"));
 
 	renderer = new ComaRenderer();
-	renderer->setBackgroundColor(0.0f, 0.0f, 0.1f);
+	renderer->setBackgroundColor(0.0f, 0.0f, 0.0f);
 
 	device->setWindowRenderer(window, renderer);
 	device->initDevice();
-
+	Resources::initBitmaps();
 	device->getSceneManager()->changeScene(new SplashScene());
 }
 void ComaApp::run()
