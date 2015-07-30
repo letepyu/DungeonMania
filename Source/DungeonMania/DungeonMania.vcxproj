@@ -87,14 +87,16 @@
     <ClCompile Include="ComaApp.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Resources.cpp" />
     <ClCompile Include="SplashScene.cpp" />
-    <ClCompile Include="titleScene.cpp" />
+    <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ComaApp.h" />
     <ClInclude Include="GameScene.h" />
+    <ClInclude Include="Resources.h" />
     <ClInclude Include="SplashScene.h" />
-    <ClInclude Include="titleScene.h" />
+    <ClInclude Include="TitleScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

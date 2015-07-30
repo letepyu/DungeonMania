@@ -1,5 +1,5 @@
 #include "ComaApp.h"
-
+#include "SplashScene.h"
 
 ComaApp::ComaApp()
 {
@@ -28,6 +28,8 @@ void ComaApp::initApp(HINSTANCE hInstance)
 
 	device->setWindowRenderer(window, renderer);
 	device->initDevice();
+
+	device->getSceneManager()->changeScene(new SplashScene());
 }
 void ComaApp::run()
 {

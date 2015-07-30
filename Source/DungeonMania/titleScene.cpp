@@ -1,11 +1,11 @@
-#include "titleScene.h"
+#include "TitleScene.h"
 
 
-titleScene::titleScene()
+TitleScene::TitleScene()
 {
 }
 
 
-titleScene::~titleScene()
+TitleScene::~TitleScene()
 {
 }

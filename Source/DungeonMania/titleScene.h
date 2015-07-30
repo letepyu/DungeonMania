@@ -2,11 +2,11 @@
 #include <coma2d.h>
 using namespace coma2d;
 
-class titleScene :
+class TitleScene :
 	public Scene
 {
 public:
-	titleScene();
-	virtual ~titleScene();
+	TitleScene();
+	virtual ~TitleScene();
 };
 
